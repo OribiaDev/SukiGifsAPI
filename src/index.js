@@ -9,14 +9,14 @@ const fs = require('fs');
 
 //Vars
 const port = 3000;
-const emotes = fs.readdirSync(path.join(__dirname, "emotes"), {withFileTypes: true}).filter(entry => entry.isDirectory()).map(entry => entry.name);
+const emotes = fs.readdirSync(path.join(__dirname, "images"), {withFileTypes: true}).filter(entry => entry.isDirectory()).map(entry => entry.name);
 
 //Init Logging
 app.use(logger)
 
 //Expose folders
 for (const emote of emotes) {
-    app.use(`/${emote}`,express.static(path.join(__dirname, "emotes", emote)));
+    app.use(`/${emote}`,express.static(path.join(__dirname, "images", emote)));
 }
 
 //Routes
@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 app.get("/:emote", (req, res) => {
     let emote = req.params.emote;
     if(emotes.includes(emote)){
-        const imagesDir = path.join(__dirname, "emotes", emote);
+        const imagesDir = path.join(__dirname, "images", emote);
         fs.readdir(imagesDir, (err, files) => {
             // Only keep image files
             const images = files.filter(file =>
