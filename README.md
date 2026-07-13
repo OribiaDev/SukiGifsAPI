@@ -19,7 +19,7 @@ An image/GIF API to power SukiGifs
 
 ## Reporting Bugs
 
-* If you find a bug within Meii's source code or while using the API, please report it in the issues tab or make a pull request
+* If you find a bug within the API's source code or while using the API, please report it in the issues tab or make a pull request
 
 ## Authors
 
