@@ -35,7 +35,7 @@ app.get("/:emote", (req, res) => {
             );
             const randomImage = images[Math.floor(Math.random() * images.length)];
             res.json({
-                image: `${req.protocol}://${req.get("host")}/${emote}/${randomImage}`
+                url: `${req.protocol}://${req.get("host")}/${emote}/${randomImage}`
             });
         });
     }else{
