@@ -13,8 +13,9 @@ An image/GIF API to power SukiGifs
 * Download the source code either with git or downloading it at the top right
 * Extract it, open the folder in the command prompt
 * type ```npm install``` to install the necessary packages
-* Create folders in /src/images for ur categories
-* Add images in said created folders
+* Create folder "images" /src/images/
+* Add folders in images folder for categories (example: /src/images/cats)
+* Add images in newly created category folder 
 * type ```node .``` to start the API.
 
 ## Reporting Bugs
